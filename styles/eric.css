@@ -1,0 +1,84 @@
+section header {
+    /*background: yellow;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 20px;
+    background-image: url("../pictures/header-img.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-position-x: 40px;
+}
+
+section header hr {
+    margin: 0px 0px 0px 40px;
+}
+
+.slide > div {
+    padding: 100px 40px 40px 40px;
+    width: 940px;
+}
+
+.slide>.footer {
+    /*background: #ddd;*/
+    position: absolute;
+    padding:0;
+    padding-left: 40px;
+    height: 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: initial;
+    width: initial;
+}
+
+.slide>.link {
+    /*background: #ddd;*/
+    position: absolute;
+    padding:0;
+    padding-left: 40px;
+    height: 50px;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    top: initial;
+    width: initial;
+}
+
+.slide>.footer hr {
+    margin: 0px 40px 0px 0px
+}
+
+.slide:after {
+    bottom : 10px;
+    color: black;
+}
+
+/* first slide */
+.slide.first {
+    background-image: url("../pictures/first-slide-background.png");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 40%;
+}
+
+.slide.first .title {
+    background-image: url("../pictures/first-slide-eric-name.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: 40%;
+
+    height: 70%;
+}
+
+.slide.first .title h2 {
+    text-align: right;
+}
+
+.slide.first .footer p {
+    margin: 0;
+    line-height: initial;
+}
