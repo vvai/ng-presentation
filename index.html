@@ -82,6 +82,21 @@
 </section>
 
 <section class="slide">
+    <header><span>MVC</span>
+        <hr/>
+    </header>
+    <div style="text-align:center">
+        <img src="pictures/slide/mvc3.png" style="height:80%" alt="angular inside">
+    </div>
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
+
+<section class="slide">
     <header><span>Scope</span>
         <hr/>
     </header>
@@ -122,20 +137,141 @@
 </section>
 
 <section class="slide">
-    <header><span>Custom directives</span>
+    <header><span>Custom directive</span>
         <hr/>
     </header>
     <div>
         <pre>
-			<code>
-                angular.module('filters', []).
-                filter('goodness', function() {
-                return function(input) {
-                return input ? 'good' : 'bad';
-                };
-                )};
+			<code style="line-height: 1.5;">
+    myapp.directive('myDirective', function() {
+        return {
+            restrict: 'EA',
+            replace: true,
+            template: '&lt;a href="http://google.com"&gt;Click me&lt;/a&gt;'
+        }
+    })
+
+    &lt;div my-directive&gt;&lt;/div&gt;
+    &lt;my-directive&gt;&lt;/my-directive&gt;
             </code>
 		</pre>
+    </div>
+
+    <div class="link"><a href="http://jsbin.com/tofigo/edit?html,output">other example</a></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <header><span>Angular services</span>
+        <hr/>
+    </header>
+    <div>
+        <ul style="margin-left: 10%;margin-bottom: 0;">
+            <li>constant</li>
+            <li>value</li>
+            <li>factory</li>
+            <li>service</li>
+            <li>provider</li>
+        </ul>
+        <pre>
+			<code>
+        app.constant('fooConfig', {
+            config1: true,
+            config2: "Default config2"
+        });
+            </code>
+        </pre>
+    </div>
+
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <header><span>Factory service</span>
+        <hr/>
+    </header>
+    <div>
+        <pre>
+			<code style="line-height: 1.5;">
+            app.factory('UserService', function() {
+                var current_user;
+                return {
+                    getCurrentUser: function() {
+                        return current_user;
+                    },
+                    setCurrentUser: function(user) {
+                        current_user = user;
+                    }
+                }
+            });
+            </code>
+        </pre>
+    </div>
+
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <header><span>Service</span>
+        <hr/>
+    </header>
+    <div>
+        <pre>
+			<code style="line-height: 1.5;">
+            app.service('foo', function() {
+
+                var thisIsPrivate = "Private";
+                this.variable = "This is public";
+                this.getPrivate = function() {
+                    return thisIsPrivate;
+                };
+
+            });
+            </code>
+        </pre>
+    </div>
+
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
+
+<section class="slide">
+    <header><span>Communication with server</span>
+        <hr/>
+    </header>
+    <div>
+        <pre>
+			<code style="line-height: 1.5;">
+        $http({
+            method: 'GET',
+            url: '/api/users.json'
+        }).success(function(data, status, headers, config) {
+            // This is called when the response is
+            // ready
+        }).error(function(data, status, headers, config) {
+            // This is called when the response
+            // comes back with an error status
+        });
+            </code>
+        </pre>
     </div>
 
     <div class="link"></div>
@@ -150,7 +286,26 @@
     <!--<iframe width="100%" height="100%" src="http://todomvc.com/examples/angularjs/#/"></iframe>-->
 <!--</section>-->
 
+<section class="slide shout" style="background: white"><div>
+    <h2 style="color: black">
+        Angular 2
+    </h2>
+</div></section>
 
+<section class="slide">
+    <header><span>Type Script</span>
+        <hr/>
+    </header>
+    <div style="text-align:center">
+        <img src="pictures/slide/type%20script.png" style="height:80%" alt="angular inside">
+    </div>
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
 
 <section class="slide">
     <header><span>Angular 1.X</span>
@@ -198,7 +353,7 @@
 </section>
 
 <section class="slide">
-    <header><span>Web components</span>
+    <header><span>Deleted things</span>
         <hr/>
     </header>
     <div style="text-align:center">
@@ -212,6 +367,26 @@
     </div>
 </section>
 
+<section class="slide shout" style="background: white"><div>
+    <h2 style="color: black">
+        The End.
+    </h2>
+</div></section>
+
+<section class="slide">
+    <header><span>Angular inside</span>
+        <hr/>
+    </header>
+    <div style="text-align:center">
+        <img src="pictures/slide/angular-inside.png" style="height:80%" alt="angular inside">
+    </div>
+    <div class="link"></div>
+    <div class="footer">
+        <hr/>
+        <p>ericpol.com
+        </p>
+    </div>
+</section>
 <!--
     To hide progress bar from entire presentation
     just remove “progress” element.
